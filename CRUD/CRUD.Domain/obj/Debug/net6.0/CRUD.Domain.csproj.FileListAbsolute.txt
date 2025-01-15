@@ -1,0 +1,12 @@
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.deps.json
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.pdb
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.csproj.AssemblyReference.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.AssemblyInfoInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.AssemblyInfo.cs
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.csproj.CoreCompileInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\refint\CRUD.Domain.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.pdb
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Domain\obj\Debug\net6.0\ref\CRUD.Domain.dll
