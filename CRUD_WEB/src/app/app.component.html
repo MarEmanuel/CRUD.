@@ -1,15 +1,37 @@
-<div class = "web-container">
+<div *ngIf="!isLoginPage; else loginPage" class="web-container">
 
   <!--Barra de navegación-->
-  <div class = "left-column">
-    <div class = "side-bar">
-
+  <div class="left-column">
+    <div class="side-bar">
+      <ul>
+        <!-- Iteración de permisos -->
+        <li *ngFor="let permiso of permisos">
+          <a [routerLink]="permiso.rutaPermiso" class="permission-link">
+            <mat-icon>{{ permiso.iconoPermiso }}</mat-icon>
+            <span>{{ permiso.nombrePermiso }}</span>
+          </a>
+        </li>
+      </ul>
+      <li>
+        <button (click)="onLogout()" class="logout-button">
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar Sesión</span>
+        </button>
+      </li>
     </div>
   </div>
-  
+
   <!--Componente-->
-  <div class = "right-column">
+  <div class="right-column">
     <router-outlet></router-outlet>
   </div>
-  
+
 </div>
+
+<ng-template #loginPage>
+
+  <div class="login-container">
+    <router-outlet></router-outlet>
+  </div>
+
+</ng-template>

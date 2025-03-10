@@ -1,0 +1,31 @@
+<div class = "login-component-title">
+    <span>
+        <mat-icon>menu</mat-icon>
+        Sistema de Gestión de Usuarios - SGU
+    </span>
+</div>
+
+<div class = "login-component-layout">
+    <mat-tab-group>
+        <mat-tab label="Iniciar Sesión">
+            <div class = "mat-tab-display">
+                <app-dynamic-form
+                [fields] = "loginFields"
+                [buttons] = "loginButtons"
+                (submit)="IniciarSesion($event)">
+                </app-dynamic-form>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Registrarse" class = "mat-tab-display">
+            <div class = "mat-tab-display">
+                <app-dynamic-form
+                    [fields] = "registerFields"
+                    [buttons] = "registerButtons"
+                    [showCancel] = "true"
+                    (submit)="AgregarRegistro($event)">
+                </app-dynamic-form>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

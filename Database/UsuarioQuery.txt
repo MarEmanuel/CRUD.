@@ -1,0 +1,152 @@
+CREATE TABLE Usuarios (
+    idUsuario INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Username VARCHAR(50) NOT NULL,
+    Password VARCHAR(20) NOT NULL,
+    Mail VARCHAR(100) NOT NULL,
+    idPersona INT NOT NULL,
+    idRol INT NOT NULL,
+    EstadoUsuario CHAR DEFAULT 'A' NOT NULL,
+    EsActivo CHAR DEFAULT 'A' NOT NULL,
+    FechaCreacion DATE,
+    FechaEdicion DATE,
+    FechaEliminacion DATE,
+    UsuarioCreacion INT,
+    UsuarioEdicion INT,
+    UsuarioEliminacion INT,
+    FOREIGN KEY (idPersona) REFERENCES Persona(idPersona),
+    FOREIGN KEY (idRol) REFERENCES Roles(idRol)
+);
+
+GO
+CREATE PROCEDURE InsertarUsuario
+    @UserUsername VARCHAR(50),
+	@UserPassword VARCHAR(20),
+	@UserMail VARCHAR(100),
+	@PersonID INT,
+	@UserRole INT,
+	@UserStatus VARCHAR(1)
+AS
+BEGIN
+    INSERT INTO Usuarios (Username, Password, Mail, idPersona, idRol, EstadoUsuario, FechaCreacion)
+    VALUES (@UserUsername, @UserPassword, @UserMail, @PersonID, @UserRole, @UserStatus, GETDATE());
+END;
+
+EXEC InsertarUsuario 'juanito_123', '12345', 'juanito@gmail.com', 1, 2, 'A'
+EXEC InsertarUsuario 'maria_g_321', 'mochiladedora', 'mariabebe@gmail.com', 2, 1, 'I'
+
+GO
+CREATE PROCEDURE LeerUsuarios
+AS
+BEGIN
+    SELECT 
+        U.idUsuario, U.Username, U.Password, U.Mail, U.idPersona, 
+		CONCAT(P.NombresPersona, ' ', P.ApellidosPersona) AS 'NombrePersona', R.idRol, R.NombreRol, U.EstadoUsuario, U. EsActivo,
+		U.FechaCreacion, U.UsuarioCreacion, U.FechaEdicion, U.UsuarioEdicion, U.FechaEliminacion, U.UsuarioEliminacion
+    FROM 
+        Usuarios U
+	JOIN Persona P ON U.idPersona = P.idPersona
+	JOIN Roles R on U.idRol = R.idRol
+	WHERE
+		U.EsActivo = 'A'
+END;
+
+EXEC LeerUsuarios;
+
+GO
+CREATE PROCEDURE LeerUsuarioPorID
+	@UserID INT
+AS
+BEGIN
+    SELECT 
+        U.idUsuario, U.Username, U.Password, U.Mail, U.idPersona, 
+		CONCAT(P.NombresPersona, ' ', P.ApellidosPersona) AS 'NombrePersona', R.idRol, R.NombreRol, U.EstadoUsuario, U. EsActivo,
+		U.FechaCreacion, U.UsuarioCreacion, U.FechaEdicion, U.UsuarioEdicion, U.FechaEliminacion, U.UsuarioEliminacion
+    FROM 
+        Usuarios U
+	JOIN Persona P ON U.idPersona = P.idPersona
+	JOIN Roles R on U.idRol = R.idRol
+	WHERE
+		U.idUsuario = @UserID
+END;
+
+GO
+CREATE PROCEDURE ListarUsuarios
+AS
+BEGIN
+	SELECT
+		idUsuario,
+		Username
+	FROM 
+		Usuarios
+	WHERE
+		EsActivo = 'A'
+END;
+
+EXEC ListarUsuarios;
+
+GO
+CREATE PROCEDURE EditarUsuario
+	@UserID INT,
+	@UserUsername VARCHAR(50),
+	@UserPassword VARCHAR(20),
+	@UserMail VARCHAR(100),
+	@PersonID INT,
+	@UserRole INT,
+	@UserStatus VARCHAR(1)
+AS
+BEGIN
+	UPDATE
+		Usuarios 
+	SET 
+		Username = @UserUsername,
+		Password = @UserPassword,
+		Mail = @UserMail,
+		idPersona = @PersonID,
+		idRol = @UserRole,
+		EstadoUsuario = @UserStatus,
+		FechaEdicion = GETDATE()
+	WHERE
+		idUsuario = @UserID
+END;
+
+EXEC EditarUsuario '2', 'maria_g_321', 'mochiladedora', 'mariabebe@gmail.com', 2, 2, 'A'
+
+GO
+CREATE PROCEDURE EliminarUsuario
+	@UserID INT
+AS
+BEGIN
+	UPDATE
+		Usuarios 
+	SET 
+		EsActivo = 'I',
+		FechaEliminacion = GETDATE()
+	WHERE
+		idUsuario = @UserID
+END;
+
+EXEC EliminarUsuario 2;
+
+GO
+CREATE PROCEDURE RegistroPersonaUsuario
+    @PersonName VARCHAR(80),
+    @PersonLastName VARCHAR(60),
+    @PersonID VARCHAR(60),
+    @PersonGender VARCHAR(1),
+    @PersonBirthDate DATE,
+    @UserUsername VARCHAR(50),
+    @UserPassword VARCHAR(20),
+    @UserMail VARCHAR(100)
+AS
+BEGIN
+    DECLARE @NewPersonID INT;
+
+    EXEC InsertarPersona @PersonName, @PersonLastName, @PersonID, @PersonGender, @PersonBirthDate, 'A';
+
+    SELECT @NewPersonID = idPersona
+    FROM Persona
+    WHERE Identificacion = @PersonID
+
+    EXEC InsertarUsuario @UserUsername, @UserPassword, @UserMail, @NewPersonID, 1, 'A';
+END;
+

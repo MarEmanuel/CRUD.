@@ -1,1 +1,38 @@
-<p>roles works!</p>
+<!-- Breadcrumb -->
+<app-breadcrumb [breadcrumbs]="roles_breadcrumb"></app-breadcrumb>
+
+<!-- Espaciado entre el Breadcrumb y el Título -->
+<div class = "padding"></div>
+
+<div class = "component-content">
+    <!--Título de la página-->
+    <div class="titulo-componente">
+        <mat-icon>lock_person</mat-icon>
+        <div class="titulo-texto">
+            <h1>Roles de Usuario</h1>
+            <h3>¿Hay nuevos cambios en algún rol existente?</h3>
+        </div>
+    </div>
+
+    <!-- Tabla de datos y filtro de búsqueda-->
+    <div class = "table-container">
+        <div class="search-add">
+            <app-search-bar (searchChanged)="onSearchTermChanged($event)"></app-search-bar>
+            <button 
+                mat-flat-button 
+                class="add-button"
+                (click)="AgregarRol()">
+                <mat-icon>add_circle</mat-icon>
+                Agregar Rol
+            </button>
+          </div>
+          
+        <app-list-table
+            [columns]="_rolComponent.tableColumns"
+            [data]="_rolComponent.tableDatas"
+            [actions]="_rolComponent.tableActions"
+            (editItem)="onEdit($event)"
+            (deleteItem)="onDelete($event)">
+        </app-list-table>
+    </div>
+</div>

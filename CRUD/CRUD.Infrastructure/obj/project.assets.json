@@ -764,6 +764,16 @@
           "bin/placeholder/CRUD.Domain.dll": {}
         }
       },
+      "CRUD.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CRUD.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Shared.dll": {}
+        }
+      },
       "CRUD.Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2006,6 +2016,11 @@
       "path": "../CRUD.Domain/CRUD.Domain.csproj",
       "msbuildProject": "../CRUD.Domain/CRUD.Domain.csproj"
     },
+    "CRUD.Shared/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Shared/CRUD.Shared.csproj",
+      "msbuildProject": "../CRUD.Shared/CRUD.Shared.csproj"
+    },
     "CRUD.Utilities/1.0.0": {
       "type": "project",
       "path": "../CRUD.Utilities/CRUD.Utilities.csproj",
@@ -2015,6 +2030,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "CRUD.Domain >= 1.0.0",
+      "CRUD.Shared >= 1.0.0",
       "CRUD.Utilities >= 1.0.0",
       "System.Linq.Dynamic.Core >= 1.5.1"
     ]
@@ -2054,6 +2070,9 @@
             "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Domain\\CRUD.Domain.csproj": {
               "projectPath": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Domain\\CRUD.Domain.csproj"
             },
+            "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Shared\\CRUD.Shared.csproj": {
+              "projectPath": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Shared\\CRUD.Shared.csproj"
+            },
             "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Utilities\\CRUD.Utilities.csproj": {
               "projectPath": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Utilities\\CRUD.Utilities.csproj"
             }
@@ -2070,7 +2089,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -2097,8 +2116,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.5.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
+      "libraryId": "System.Linq.Dynamic.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

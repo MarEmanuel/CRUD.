@@ -1,0 +1,83 @@
+<div class="dashboard-header">
+    <div class="welcome-container">
+        <div class="welcome-message">
+            <h3 *ngIf="persona && persona[0]">¡Bienvenido de vuelta, {{ persona[0].NombresPersona }}!</h3>
+            <h3 *ngIf="!persona || !persona[0]">¡Bienvenido de vuelta, Usuario!</h3>
+            <h5>Consulta tu información.</h5>
+        </div>
+        <div class="user-icon">
+            <mat-icon>person</mat-icon>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="dashboard-body">
+    <!--Datos generales de la persona -->
+    <div class="person-data-container">
+        <mat-card appearance="outlined">
+            <mat-card-header style="padding: 2%;">
+                <div class="header-container">
+                    <div class="icon-text-container">
+                        <mat-icon>person</mat-icon>
+                        <div class="text-container">
+                            <h2>Datos de la persona</h2>
+                            <h3 style="font-weight: lighter; font-size: 18px;">¿Alguna novedad?</h3>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-header>
+            <mat-card-content class="content-container">
+                <span>Revise su información y actualícela de ser necesario.</span>
+                <div class="button-container">
+                    <button mat-raised-button (click)="VisualizarPersona()">
+                        Visualizar información
+                    </button>
+                    <button mat-flat-button (click)="EditarPersona()">
+                        Editar información
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <!-- Estadísticas -->
+        <div class="statistics-data-container">
+
+            <!-- Sesión activa -->
+            <mat-card appearance="outlined" class="card-30">
+                <mat-card-header style="padding: 5%;">
+                    <div class="header-container">
+                        <mat-icon>verified_user</mat-icon>
+                        <div class="text-container">
+                            <h2>Tipo de cuenta</h2>
+                            <h3 style="font-weight: lighter; font-size: 18px;">¿Qué rol tiene su cuenta?</h3>
+                        </div>
+                    </div>
+                </mat-card-header>
+                <mat-card-content style="padding: 5%;">
+                    Su cuenta tiene permisos de "{{rolCuenta}}".
+                </mat-card-content>
+            </mat-card>
+            
+            <!-- Historial de sesiones -->
+            <mat-card appearance="outlined" class="card-70">
+                <mat-card-header style="padding: 2%;">
+                    <div class="header-container">
+                        <mat-icon>table_chart</mat-icon>
+                        <div class="text-container">
+                            <h2>Historial de sesiones</h2>
+                            <h3 style="font-weight: lighter; font-size: 18px;">¿Cuántas sesiones se han registrado para esta cuenta?</h3>
+                        </div>
+                    </div>
+                </mat-card-header>
+                <mat-card-content style="padding: 2%;">
+                    <app-list-table
+                        [columns]="_userComponent.tableColumns"
+                        [data]="_userComponent.tableDatas">
+                    </app-list-table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

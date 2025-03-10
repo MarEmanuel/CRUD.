@@ -645,7 +645,7 @@
         },
         "runtime": {
           "CRUD.Application.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -656,7 +656,7 @@
         },
         "runtime": {
           "CRUD.Domain.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -664,12 +664,21 @@
       "CRUD.Infrastructure/1.0.0": {
         "dependencies": {
           "CRUD.Domain": "1.0.0",
+          "CRUD.Shared": "1.0.0",
           "CRUD.Utilities": "1.0.0",
           "System.Linq.Dynamic.Core": "1.5.1"
         },
         "runtime": {
           "CRUD.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CRUD.Shared/1.0.0": {
+        "runtime": {
+          "CRUD.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -677,7 +686,7 @@
       "CRUD.Utilities/1.0.0": {
         "runtime": {
           "CRUD.Utilities.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1149,6 +1158,11 @@
       "sha512": ""
     },
     "CRUD.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CRUD.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

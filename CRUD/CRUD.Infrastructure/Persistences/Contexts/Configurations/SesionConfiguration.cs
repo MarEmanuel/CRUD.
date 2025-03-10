@@ -8,11 +8,20 @@ namespace CRUD.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Sesion> builder)
         {
-            builder.HasNoKey();
+            builder.HasKey(e => e.IdSesion)
+                    .HasName("PK__Sesiones");
 
-            builder.Property(e => e.FechaCierre).HasColumnType("date");
+            builder.Property(e => e.IdSesion)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("idSesion");
+
+            builder.Property(e => e.FechaEgreso).HasColumnType("date");
 
             builder.Property(e => e.FechaIngreso).HasColumnType("date");
+
+            builder.Property(e => e.SesionActiva)
+                .HasMaxLength(1)
+                .IsUnicode(false);
 
             builder.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 

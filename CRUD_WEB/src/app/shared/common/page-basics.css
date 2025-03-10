@@ -1,0 +1,39 @@
+.component-content{
+    background-color:  #FFFFFF;
+    border-radius: 20px;
+}
+
+.padding {
+    margin-top: 1%;
+}
+
+.titulo-componente {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2%;
+    padding-bottom: 0;
+    color: black;
+}
+
+.titulo-componente h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.titulo-componente h3 {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.titulo-componente mat-icon {
+    font-size: 50px;
+    height: 50%;
+    width: 5%;
+}
+
+h1,
+h3 {
+    margin: 0;
+    line-height: 1.5;
+}

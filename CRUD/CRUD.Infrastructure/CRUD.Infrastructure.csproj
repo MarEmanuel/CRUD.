@@ -7,18 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\Bases\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Persistences\Interfaces\" />
-    <Folder Include="Persistences\Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.5.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CRUD.Domain\CRUD.Domain.csproj" />
+    <ProjectReference Include="..\CRUD.Shared\CRUD.Shared.csproj" />
     <ProjectReference Include="..\CRUD.Utilities\CRUD.Utilities.csproj" />
   </ItemGroup>
 

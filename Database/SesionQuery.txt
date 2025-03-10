@@ -1,0 +1,128 @@
+CREATE TABLE Sesiones(
+	idSesion INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	idUsuario INT NOT NULL,
+	FechaIngreso DATETIME,
+	FechaEgreso DATETIME,
+	SesionActiva CHAR DEFAULT 'A' NOT NULL,
+	FOREIGN KEY (idUsuario) REFERENCES Usuarios (idUsuario)
+);
+
+GO
+CREATE PROCEDURE GuardarSesionActiva
+    @UserID INT
+AS
+BEGIN
+    INSERT INTO Sesiones (idUsuario, FechaIngreso)
+    VALUES (@UserID, GETDATE());
+END;
+
+EXEC GuardarSesionActiva 1;
+
+GO
+CREATE PROCEDURE LeerSesiones
+AS
+BEGIN
+    SELECT 
+        S.idSesion, S.idUsuario, CONCAT(P.NombresPersona, ' ', P.ApellidosPersona) AS 'NombresPersona',
+		S.FechaIngreso, S.FechaEgreso, S.SesionActiva
+    FROM 
+        Sesiones S
+	JOIN Usuarios U ON S.idUsuario = U.idUsuario
+	JOIN Persona P ON U.idPersona = P.idPersona
+END;
+
+EXEC LeerSesiones;
+
+GO
+CREATE PROCEDURE LeerSesionPorID
+	@UserID INT
+AS
+BEGIN
+    SELECT 
+        S.idSesion, S.idUsuario, CONCAT(P.NombresPersona, ' ', P.ApellidosPersona) AS 'NombresPersona',
+		S.FechaIngreso, S.FechaEgreso, S.SesionActiva
+    FROM 
+        Sesiones S
+	JOIN Usuarios U ON S.idUsuario = U.idUsuario
+	JOIN Persona P ON U.idPersona = P.idPersona
+	WHERE
+		S.idUsuario = @UserID
+END;
+
+EXEC LeerSesionPorID 1;
+
+GO
+CREATE PROCEDURE GuardarSesionInactiva
+	@SessionID INT,
+    	@UserID INT
+AS
+BEGIN
+    UPDATE
+		Sesiones 
+	SET
+		FechaEgreso = GETDATE(),
+		SesionActiva = 'I'
+	WHERE
+		idSesion = @SessionID AND
+		idUsuario = @UserID;
+END;
+
+EXEC GuardarSesionInactiva 1, 1;
+
+GO
+CREATE PROCEDURE IniciarSesion
+    @Username VARCHAR(100),
+    @Password VARCHAR(100)
+AS
+BEGIN
+    DECLARE @UserID INT;
+    DECLARE @PasswordInDB VARCHAR(100);
+    DECLARE @IsPasswordValid BIT;
+    DECLARE @IdRol INT;
+    DECLARE @RoleName VARCHAR(100);
+    DECLARE @SessionID INT;
+
+    SELECT @UserID = u.idUsuario, 
+           @PasswordInDB = u.Password,
+           @IdRol = r.idRol,
+           @RoleName = r.NombreRol
+    FROM Usuarios u
+    INNER JOIN Roles r ON u.IdRol = r.idRol
+    WHERE u.Username = @Username;
+
+    IF @UserID IS NULL
+    BEGIN
+        SELECT 
+            NULL AS UserID,
+            NULL AS IdRol,
+            NULL AS RoleName,
+            NULL AS SessionID,
+            'Usuario no encontrado.' AS Message;
+        RETURN;
+    END
+
+    IF @PasswordInDB <> @Password
+    BEGIN
+        SELECT 
+            NULL AS UserID,
+            NULL AS IdRol,
+            NULL AS RoleName,
+            NULL AS SessionID,
+            'Contraseña incorrecta.' AS Message;
+        RETURN;
+    END
+
+    EXEC GuardarSesionActiva @UserID;
+
+    SELECT TOP 1 @SessionID = s.idSesion
+    FROM Sesiones s
+    WHERE s.idUsuario = @UserID AND s.SesionActiva = 'A'
+    ORDER BY s.FechaIngreso DESC;
+
+    SELECT 
+        @UserID AS UserID,
+        @IdRol AS RoleID,
+        @RoleName AS RoleName,
+        @SessionID AS SessionID,
+        'Inicio de sesión exitoso.' AS Message;
+END;

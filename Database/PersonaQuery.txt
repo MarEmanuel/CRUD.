@@ -1,0 +1,152 @@
+CREATE TABLE Persona (
+    idPersona INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    NombresPersona VARCHAR(80) NOT NULL,
+    ApellidosPersona VARCHAR(60) NOT NULL,
+    Identificacion VARCHAR(10) NOT NULL,
+	Genero VARCHAR(1) NOT NULL,
+    FechaNacimiento DATE NOT NULL,
+	EstadoPersona VARCHAR DEFAULT 'A' NOT NULL,
+	EsActivo CHAR DEFAULT 'A' NOT NULL,
+	FechaCreacion DATE,
+	FechaEdicion DATE,
+	FechaEliminacion DATE,
+	UsuarioCreacion INT,
+	UsuarioEdicion INT,
+	UsuarioEliminacion INT
+);
+
+GO
+CREATE PROCEDURE InsertarPersona
+    @PersonName VARCHAR(80),
+	@PersonLastName VARCHAR(60),
+	@PersonID VARCHAR(10),
+	@PersonGender VARCHAR(1),
+	@PersonBirthDate DATE,
+	@PersonStatus VARCHAR(1)
+AS
+BEGIN
+    INSERT INTO Persona (NombresPersona, ApellidosPersona, Identificacion, Genero, FechaNacimiento, EstadoPersona, FechaCreacion)
+    VALUES (@PersonName, @PersonLastName, @PersonID, @PersonGender, @PersonBirthDate, @PersonStatus, GETDATE());
+END;
+
+EXEC InsertarPersona 'Juan', 'Pérez', '1234567890', 'M', '1990-01-01', 'A'
+EXEC InsertarPersona 'María', 'Gómez', '0987654321', 'F', '1985-05-15', 'A'
+EXEC InsertarPersona 'Luis', 'Rodríguez', '1122334455', 'M', '1992-08-20', 'A'
+EXEC InsertarPersona 'Ana', 'Fernández', '2233445566', 'F', '1988-12-10', 'A'
+EXEC InsertarPersona 'Angie', 'Alvarado', '0946412221', 'F', '1995-03-30', 'A'
+
+GO
+CREATE PROCEDURE LeerPersonas
+AS
+BEGIN
+    SELECT 
+        idPersona,
+		NombresPersona,
+		ApellidosPersona,
+		Identificacion,
+		Genero,
+		FechaNacimiento,
+		EstadoPersona,
+		EsActivo,
+		FechaCreacion,
+		UsuarioCreacion,
+		FechaEdicion,
+		UsuarioEdicion,
+		FechaEliminacion,
+		UsuarioEliminacion
+    FROM 
+        Persona
+	WHERE
+		EsActivo = 'A'
+END;
+
+EXEC LeerPersonas;
+
+GO
+CREATE PROCEDURE LeerPersonaPorID
+	@PersonId INT
+AS
+BEGIN
+    SELECT 
+        idPersona,
+		NombresPersona,
+		ApellidosPersona,
+		Identificacion,
+		Genero,
+		FechaNacimiento,
+		EstadoPersona,
+		EsActivo,
+		FechaCreacion,
+		UsuarioCreacion,
+		FechaEdicion,
+		UsuarioEdicion,
+		FechaEliminacion,
+		UsuarioEliminacion
+    FROM 
+        Persona
+	WHERE
+		idPersona = @PersonId
+END;
+
+EXEC LeerPersonaPorID 1;
+
+GO
+CREATE PROCEDURE ListarPersonas
+AS
+BEGIN
+	SELECT
+		idPersona,
+		CONCAT(NombresPersona, ' ', ApellidosPersona) AS 'NombrePersona'
+	FROM 
+		Persona
+	WHERE
+		EsActivo = 'A'
+END;
+
+EXEC ListarPersonas;
+
+GO
+CREATE PROCEDURE EditarPersona
+	@PersonId INT,
+	@PersonName VARCHAR(80),
+	@PersonLastName VARCHAR(60),
+	@PersonIdentification VARCHAR(10),
+	@PersonGender VARCHAR(1),
+	@PersonBirthDate DATE,
+	@PersonStatus VARCHAR(1)
+AS
+BEGIN
+	UPDATE
+		Persona 
+	SET 
+		NombresPersona = @PersonName,
+		ApellidosPersona = @PersonLastName,
+		Identificacion = @PersonIdentification,
+		Genero = @PersonGender,
+		FechaNacimiento = @PersonBirthDate,
+		EstadoPersona = @PersonStatus,
+		FechaEdicion = GETDATE()
+	WHERE
+		idPersona = @PersonId
+END;
+
+EXEC EditarPersona 5, 'Angie', 'Alvarado', '0946412221', 'F', '1995-03-30', 'I'
+
+EXEC LeerPersonas;
+
+GO
+CREATE PROCEDURE EliminarPersona
+	@PersonIdentification INT
+AS
+BEGIN
+	UPDATE
+		Persona 
+	SET 
+		EsActivo = 'I',
+		FechaEliminacion = GETDATE()
+	WHERE
+		idPersona = @PersonIdentification
+END;
+
+EXEC EliminarPersona 5;
+

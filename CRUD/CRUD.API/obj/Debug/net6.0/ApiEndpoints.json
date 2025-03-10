@@ -1,0 +1,343 @@
+[
+  {
+    "ContainingType": "CRUD.API.Controllers.DashboardController",
+    "Method": "ListPersonas",
+    "RelativePath": "api/Dashboard/Administrador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.LoginController",
+    "Method": "RegistrarPersonaUsuario",
+    "RelativePath": "api/Login/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.RegistrationRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.LoginController",
+    "Method": "IniciarSesion",
+    "RelativePath": "api/Login/SessionStart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PermisoController",
+    "Method": "ListarPermisosPorRol",
+    "RelativePath": "api/Permiso/{idRol}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "ListPersonas",
+    "RelativePath": "api/Persona",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "EditPersona",
+    "RelativePath": "api/Persona/Edit/{idPersona}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPersona",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.PersonaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "ListPersonaByID",
+    "RelativePath": "api/Persona/GetByID/{idPersona}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPersona",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "RegisterPersona",
+    "RelativePath": "api/Persona/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.PersonaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "RemovePersona",
+    "RelativePath": "api/Persona/Remove/{idPersona}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPersona",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.PersonaController",
+    "Method": "ListSelectedPersona",
+    "RelativePath": "api/Persona/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.RolController",
+    "Method": "ListRoles",
+    "RelativePath": "api/Rol",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.RolController",
+    "Method": "EditRol",
+    "RelativePath": "api/Rol/Edit/{idRol}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.RolRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.RolController",
+    "Method": "RegistrarRol",
+    "RelativePath": "api/Rol/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.RolRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.RolController",
+    "Method": "RemoveRol",
+    "RelativePath": "api/Rol/Remove/{idRol}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.RolController",
+    "Method": "ListSelectedRoles",
+    "RelativePath": "api/Rol/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.SesionController",
+    "Method": "ListSessions",
+    "RelativePath": "api/Sesion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.SesionController",
+    "Method": "EndSession",
+    "RelativePath": "api/Sesion/EndSession",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.SesionRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.SesionController",
+    "Method": "ListSessionByID",
+    "RelativePath": "api/Sesion/GetByID/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.UsuarioController",
+    "Method": "ListUsuarios",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.UsuarioController",
+    "Method": "EditUsuario",
+    "RelativePath": "api/Usuario/Edit/{idUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.UsuarioRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.UsuarioController",
+    "Method": "ListPersonaByID",
+    "RelativePath": "api/Usuario/GetByID/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.UsuarioController",
+    "Method": "RegisterUsuario",
+    "RelativePath": "api/Usuario/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_request",
+        "Type": "CRUD.Application.DTOs.Request.UsuarioRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.API.Controllers.UsuarioController",
+    "Method": "RemoveUsuario",
+    "RelativePath": "api/Usuario/Remove/{idUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

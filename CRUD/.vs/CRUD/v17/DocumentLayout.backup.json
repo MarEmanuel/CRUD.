@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\contexts\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\contexts\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF54E506-3A81-4809-8009-7A3E2B11FF11}|CRUD.API\\CRUD.API.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.api\\controllers\\sesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF54E506-3A81-4809-8009-7A3E2B11FF11}|CRUD.API\\CRUD.API.csproj|solutionrelative:crud.api\\controllers\\sesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.application\\dtos\\request\\sesionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|solutionrelative:crud.application\\dtos\\request\\sesionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.application\\services\\sesionapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|solutionrelative:crud.application\\services\\sesionapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8D676F3-0940-4D28-A5EF-668A85B7C1B2}|CRUD.Domain\\CRUD.Domain.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.domain\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8D676F3-0940-4D28-A5EF-668A85B7C1B2}|CRUD.Domain\\CRUD.Domain.csproj|solutionrelative:crud.domain\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\repositories\\sesionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\repositories\\sesionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\interfaces\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\interfaces\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\interfaces\\ipersonarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\interfaces\\ipersonarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.infrastructure\\persistences\\contexts\\configurations\\loginconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B133446-E26F-4FD4-BF2A-B16A40EB2E19}|CRUD.Infrastructure\\CRUD.Infrastructure.csproj|solutionrelative:crud.infrastructure\\persistences\\contexts\\configurations\\loginconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.application\\dtos\\response\\login\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F1D6A75-CED1-41DE-B9BA-82CF390095DA}|CRUD.Application\\CRUD.Application.csproj|solutionrelative:crud.application\\dtos\\response\\login\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF54E506-3A81-4809-8009-7A3E2B11FF11}|CRUD.API\\CRUD.API.csproj|d:\\proyectos\\prueba_crud\\crud\\crud.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF54E506-3A81-4809-8009-7A3E2B11FF11}|CRUD.API\\CRUD.API.csproj|solutionrelative:crud.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 451,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +70,158 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SesionRequestDTO.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\DTOs\\Request\\SesionRequestDTO.cs",
+              "RelativeDocumentMoniker": "CRUD.Application\\DTOs\\Request\\SesionRequestDTO.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\DTOs\\Request\\SesionRequestDTO.cs",
+              "RelativeToolTip": "CRUD.Application\\DTOs\\Request\\SesionRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:20:20.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Contexts\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Contexts\\DatabaseContext.cs",
-              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Contexts\\DatabaseContext.cs",
-              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Contexts\\DatabaseContext.cs",
+              "Title": "SesionController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.API\\Controllers\\SesionController.cs",
+              "RelativeDocumentMoniker": "CRUD.API\\Controllers\\SesionController.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.API\\Controllers\\SesionController.cs",
+              "RelativeToolTip": "CRUD.API\\Controllers\\SesionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T20:49:52.179Z",
+              "WhenOpened": "2025-03-10T02:18:16.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SesionApplication.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\Services\\SesionApplication.cs",
+              "RelativeDocumentMoniker": "CRUD.Application\\Services\\SesionApplication.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\Services\\SesionApplication.cs",
+              "RelativeToolTip": "CRUD.Application\\Services\\SesionApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:18:09.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SesionRepository.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\SesionRepository.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Repositories\\SesionRepository.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\SesionRepository.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Repositories\\SesionRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:17:11.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Repositories\\LoginRepository.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\LoginRepository.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Repositories\\LoginRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:16:13.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonaRepository.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\PersonaRepository.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Repositories\\PersonaRepository.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Repositories\\PersonaRepository.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Repositories\\PersonaRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDkAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:14:28.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Domain\\Entities\\Login.cs",
+              "RelativeDocumentMoniker": "CRUD.Domain\\Entities\\Login.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Domain\\Entities\\Login.cs",
+              "RelativeToolTip": "CRUD.Domain\\Entities\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T01:58:43.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPersonaRepository.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Interfaces\\IPersonaRepository.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Interfaces\\IPersonaRepository.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Interfaces\\IPersonaRepository.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Interfaces\\IPersonaRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:14:13.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ILoginRepository.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Interfaces\\ILoginRepository.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Interfaces\\ILoginRepository.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Interfaces\\ILoginRepository.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Interfaces\\ILoginRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:10:46.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.API\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "CRUD.API\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.API\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "CRUD.API\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:08:25.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginConfiguration.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Contexts\\Configurations\\LoginConfiguration.cs",
+              "RelativeDocumentMoniker": "CRUD.Infrastructure\\Persistences\\Contexts\\Configurations\\LoginConfiguration.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\Persistences\\Contexts\\Configurations\\LoginConfiguration.cs",
+              "RelativeToolTip": "CRUD.Infrastructure\\Persistences\\Contexts\\Configurations\\LoginConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:05:40.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginResponseDTO.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\DTOs\\Response\\Login\\LoginResponseDTO.cs",
+              "RelativeDocumentMoniker": "CRUD.Application\\DTOs\\Response\\Login\\LoginResponseDTO.cs",
+              "ToolTip": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Application\\DTOs\\Response\\Login\\LoginResponseDTO.cs",
+              "RelativeToolTip": "CRUD.Application\\DTOs\\Response\\Login\\LoginResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T02:04:24.651Z",
               "EditorCaption": ""
             }
           ]

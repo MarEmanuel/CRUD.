@@ -1,0 +1,77 @@
+CREATE TABLE Permisos(
+	idPermiso INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	NombrePermiso VARCHAR(50) NOT NULL,
+	RutaPermiso VARCHAR(100) NOT NULL,
+	DescripcionPermiso VARCHAR(100) NOT NULL,
+	IconoPermiso VARCHAR(20) NOT NULL
+);
+
+GO
+CREATE PROCEDURE InsertarPermiso
+    @PermissionName VARCHAR(50),
+	@PermissionRoute VARCHAR(100),
+	@PermissionDescription VARCHAR(100),
+	@PermissionIcon VARCHAR(20)
+AS
+BEGIN
+    INSERT INTO Permisos (NombrePermiso, RutaPermiso, DescripcionPermiso, IconoPermiso)
+    VALUES (@PermissionName, @PermissionRoute, @PermissionDescription, @PermissionIcon);
+END;
+
+EXEC InsertarPermiso 'Dashboard', 'administrador/dashboard', 'Para visualización del dashboard de administradores.', 'dashboard';
+EXEC InsertarPermiso 'Usuarios', 'administrdor/usuarios-registrados', 'Para visualización de los usuarios existentes.', 'people';
+EXEC InsertarPermiso 'Personas', 'administrador/personas-registradas', 'Para visualización de las personas existentes.', 'people_alt';
+EXEC InsertarPermiso 'Roles', 'administrador/roles-registrados', 'Para visualización de los roles existentes.', 'lock_person';
+EXEC InsertarPermiso 'Mi Usuario', 'mi-usuario', 'Para visualización de los datos de la cuenta del usuario.', 'person';
+
+
+CREATE TABLE Rol_Permiso (
+    idRolPermiso INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    idRol INT NOT NULL,
+    idPermiso INT NOT NULL,
+    CONSTRAINT FK_Rol FOREIGN KEY (idRol) REFERENCES Roles(idRol)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CONSTRAINT FK_Permiso FOREIGN KEY (idPermiso) REFERENCES Permisos(idPermiso)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+GO
+CREATE PROCEDURE InsertarPermisoDeRol
+    @IDRol INT,
+	@IDPermiso INT
+AS
+BEGIN
+    INSERT INTO Rol_Permiso (idRol, idPermiso)
+    VALUES (@IDRol, @IDPermiso);
+END;
+
+
+EXEC InsertarPermisoDeRol '2', '6';
+EXEC InsertarPermisoDeRol '2', '7';
+EXEC InsertarPermisoDeRol '2', '8';
+EXEC InsertarPermisoDeRol '2', '9';
+EXEC InsertarPermisoDeRol '2', '10';
+EXEC InsertarPermisoDeRol '1', '10';
+
+GO
+CREATE PROCEDURE ListarPermisosDeRol
+    @IDRol INT
+AS
+BEGIN
+    SELECT 
+        R.NombreRol,
+        P.NombrePermiso,
+	P.RutaPermiso,
+        P.DescripcionPermiso,
+	P.IconoPermiso
+    FROM 
+        Roles R
+    JOIN
+        Rol_Permiso RP ON R.idRol = RP.idRol
+    JOIN
+        Permisos P ON RP.idPermiso = P.idPermiso
+    WHERE
+        R.idRol = @IDRol;
+END;

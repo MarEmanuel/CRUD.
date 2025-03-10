@@ -1,0 +1,153 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngFor="let field of fields" class="form-group">
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+
+      <mat-label>{{ field.label }}</mat-label>
+
+      <ng-container [ngSwitch]="field.type">
+
+        <!-- Campo de texto -->
+        <input 
+          *ngSwitchCase="'text'" 
+          matInput
+          maxlength= {{field.maxLength}}
+          [id]="field.name" 
+          [formControlName]="field.name"
+          [placeholder]="field.label"
+          [value]="field.value"
+          type="text"
+        />
+
+        <!-- Campo de contraseña -->
+        <div *ngSwitchCase="'password'" class="password-input-container">
+          <input
+            matInput
+            maxlength="{{ field.maxLength }}"
+            [id]="field.name"
+            [formControlName]="field.name"
+            [placeholder]="field.label"
+            [type]="showPassword ? 'text' : 'password'"
+          />
+          <!-- Botón para mostrar/ocultar contraseña -->
+          <button
+            mat-icon-button
+            type="button"
+            (click)="togglePassword()"
+            class="toggle-password-button">
+            <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </div>
+        
+        
+        <!-- Campo de email -->
+        <input 
+          *ngSwitchCase="'email'" 
+          matInput
+          maxlength= {{field.maxLength}}
+          [id]="field.name" 
+          [formControlName]="field.name"
+          [placeholder]="field.label" 
+          type="email" 
+        />
+
+        <!-- Campo de número -->
+        <input 
+          *ngSwitchCase="'number'" 
+          matInput 
+          [id]="field.name" 
+          [formControlName]="field.name"
+          [placeholder]="field.label" 
+          type="number" 
+        />
+
+        <!-- Campo de texto número -->
+        <input 
+          *ngSwitchCase="'numeric_text'" 
+          matInput
+          maxlength= {{field.maxLength}}
+          [id]="field.name" 
+          [formControlName]="field.name"
+          [placeholder]="field.label" 
+          [pattern]="'^[0-9]*$'" 
+          type="text" 
+        />
+
+        <!-- Campo de elección de fecha -->
+        <ng-container *ngSwitchCase="'datepicker'">
+          <div class="datepicker-container">
+            <input 
+            matInput 
+            [id]="field.name" 
+            [formControlName]="field.name" 
+            [placeholder]="field.label"
+            [matDatepicker]="picker" />
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          </div>
+          <mat-datepicker #picker></mat-datepicker>
+        </ng-container>
+
+        <!-- Campo de área de texto -->
+        <textarea 
+          *ngSwitchCase="'textarea'" 
+          matInput
+          maxlength= {{field.maxLength}}
+          [id]="field.name" 
+          [formControlName]="field.name"
+          [placeholder]="field.label">
+        </textarea>
+
+        <!-- Campo de selección -->
+        <ng-container *ngSwitchCase="'select'">
+          <mat-select 
+          [id]="field.name" 
+          [formControlName]="field.name" 
+          [placeholder]="field.label">
+            <mat-option *ngFor="let option of field.options" [value]="option.value">
+              {{ option.label }}
+            </mat-option>
+          </mat-select>
+        </ng-container>
+      </ng-container>
+
+      <!-- Validación que no se exceda la cantidad de caractéres permitidos -->
+      <mat-hint *ngIf="field.maxLength != null" align="end">
+        {{ form.get(field.name)?.value?.length || 0 }} / {{ field.maxLength }}
+      </mat-hint>
+
+      <!-- Validaciones -->
+      <mat-error *ngIf="form.get(field.name)?.hasError('required') && form.get(field.name)?.touched">
+        "{{ field.label }}" es un campo requerido.
+      </mat-error>
+
+      <mat-error *ngIf="form.get(field.name)?.hasError('email') && form.get(field.name)?.touched">
+        Por favor, ingresa un correo electrónico válido.
+      </mat-error>
+
+      <mat-error *ngIf="form.get(field.name)?.hasError('nonNegative') && form.get(field.name)?.touched">
+        "{{ field.label }}" no puede ser un número negativo.
+      </mat-error>
+
+      <mat-error *ngIf="form.get(field.name)?.hasError('pattern') && form.get(field.name)?.touched">
+        "{{ field.label }}" solo puede contener números.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <!-- Botones -->
+  <div style="display: flex; gap: 10px; margin-top: 20px;">
+    <button
+      [style.background-color]="button.color"
+      *ngFor="let button of buttons"
+      mat-flat-button
+      [type]="button.type"
+      [ngClass]="button.type">
+      {{ button.label }}
+    </button>
+
+    <button *ngIf="showCancel" mat-stroked-button type="button" (click)="onCancel()">
+      Cancelar
+    </button>
+  </div>
+
+</form>

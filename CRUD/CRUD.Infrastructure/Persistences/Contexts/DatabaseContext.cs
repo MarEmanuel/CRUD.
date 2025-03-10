@@ -21,6 +21,10 @@ namespace CRUD.Infrastructure.Persistences.Contexts
         public virtual DbSet<Rol> Roles { get; set; } = null!;
         public virtual DbSet<Sesion> Sesiones { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+        public virtual DbSet<AdminDashboard> AdminDashboard { get; set; } = null!;
+        public virtual DbSet<Permiso> Permiso { get; set; } = null!;
+        public virtual DbSet<Register> Register { get; set; } = null!;
+        public virtual DbSet<Login> Login { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

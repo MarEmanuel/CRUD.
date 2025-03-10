@@ -1,0 +1,36 @@
+:host {
+    display: block;
+    height: 100vh;
+    background-color: #F4F6FE;
+}
+
+.login-component-title {
+    padding: 2%;
+    background-color: #3DBFEF;
+}
+
+.login-component-title span {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.login-component-title mat-icon {
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-component-layout {
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin: 3%;
+    padding: 3%;
+}
+
+.mat-tab-display {
+    padding: 3%;
+}

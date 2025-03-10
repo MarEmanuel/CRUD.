@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ioF8bPwiP4E=",
+  "dgSpecHash": "0Ur3Dhvf4lA=",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\Prueba_CRUD\\CRUD\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -46,5 +46,16 @@
     "C:\\Users\\USER\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.5.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
+      "libraryId": "System.Linq.Dynamic.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -1158,6 +1158,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "CRUD.Domain": "1.0.0",
+          "CRUD.Shared": "1.0.0",
           "CRUD.Utilities": "1.0.0",
           "System.Linq.Dynamic.Core": "1.5.1"
         },
@@ -1166,6 +1167,16 @@
         },
         "runtime": {
           "bin/placeholder/CRUD.Infrastructure.dll": {}
+        }
+      },
+      "CRUD.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CRUD.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Shared.dll": {}
         }
       },
       "CRUD.Utilities/1.0.0": {
@@ -3173,6 +3184,11 @@
       "path": "../CRUD.Infrastructure/CRUD.Infrastructure.csproj",
       "msbuildProject": "../CRUD.Infrastructure/CRUD.Infrastructure.csproj"
     },
+    "CRUD.Shared/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Shared/CRUD.Shared.csproj",
+      "msbuildProject": "../CRUD.Shared/CRUD.Shared.csproj"
+    },
     "CRUD.Utilities/1.0.0": {
       "type": "project",
       "path": "../CRUD.Utilities/CRUD.Utilities.csproj",
@@ -3242,7 +3258,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -3278,7 +3294,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

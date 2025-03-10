@@ -1,0 +1,19 @@
+.table-container{
+    padding: 2%;
+}
+
+.search-add {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+app-search-bar {
+    flex: 1;
+}
+  
+.add-button {
+    flex-shrink: 0;
+    height: 55px;
+    border-radius: 15px;
+}

@@ -1,4 +1,6 @@
 ﻿using CRUD.Infrastructure.Persistences.Contexts;
+using CRUD.Infrastructure.Persistences.Interfaces;
+using CRUD.Infrastructure.Persistences.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,10 @@ namespace CRUD.Infrastructure.Extensions
                     b => b.MigrationsAssembly(assembly)
                     ), ServiceLifetime.Transient
                 );
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;
         }

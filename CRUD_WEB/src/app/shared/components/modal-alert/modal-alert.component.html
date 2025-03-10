@@ -1,0 +1,22 @@
+<div class="dialog-title" [style.background-color]="data.header_color">
+    <mat-icon>{{ data.icon }}</mat-icon>
+    <h2>{{ data.title }}</h2>
+</div>
+
+<mat-dialog-content class="dialog-content">
+    <p *ngIf="data.message">{{ data.message }}</p>
+
+    <app-dynamic-form 
+        [fields]="fields" 
+        [buttons]="buttons"
+        (submit)="onConfirm($event)" 
+        (cancel)="onCancel()">
+    </app-dynamic-form>
+
+</mat-dialog-content>
+ 
+<mat-dialog-actions *ngIf="data.showButtons">
+    <button mat-stroked-button (click)="onCancel()">Cancelar</button>
+    <button mat-flat-button (click)="onConfirm(1)">Confirmar</button>
+</mat-dialog-actions>
+  

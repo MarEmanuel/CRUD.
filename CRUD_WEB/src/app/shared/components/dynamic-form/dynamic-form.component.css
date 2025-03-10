@@ -1,0 +1,60 @@
+form {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+mat-form-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.datepicker-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.datepicker-container input {
+    flex-grow: 1;
+}
+
+mat-datepicker-toggle {
+    margin-left: -40px;
+}
+
+.password-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-password-button {
+    margin-left: 8px;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    form {
+        max-width: 100%;
+    }
+
+    mat-form-field {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}

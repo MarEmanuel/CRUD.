@@ -1,10 +1,3 @@
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.csproj.AssemblyReference.cache
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.AssemblyInfoInputs.cache
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.AssemblyInfo.cs
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.csproj.CoreCompileInputs.cache
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.MvcApplicationPartsAssemblyInfo.cs
-D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\appsettings.Development.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\appsettings.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.API.staticwebassets.endpoints.json
@@ -73,6 +66,14 @@ D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Application.pdb
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Infrastructure.pdb
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Utilities.pdb
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Domain.pdb
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.csproj.AssemblyReference.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.AssemblyInfoInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.AssemblyInfo.cs
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.csproj.CoreCompileInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.sourcelink.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\scopedcss\bundle\CRUD.API.styles.css
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\staticwebassets.build.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\staticwebassets.development.json
@@ -90,3 +91,5 @@ D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\refint\CRUD.API.dll
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.pdb
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\CRUD.API.genruntimeconfig.cache
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\obj\Debug\net6.0\ref\CRUD.API.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Shared.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.API\bin\Debug\net6.0\CRUD.Shared.pdb

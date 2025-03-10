@@ -1,0 +1,56 @@
+<div class="dashboard-header">
+    <div class="welcome-message">
+        <h3>¡Bienvenido de vuelta, Administrador!</h3>
+        <h5>¿Qué ha cambiado desde tu última visita?</h5>
+    </div>
+</div>
+
+<br>
+
+<div class="dashboard-body">
+    <div class="cards-container">
+        <mat-card *ngFor="let card of cards" appearance="outlined">
+            <mat-card-header>
+                <div class="header-container">
+                    <mat-icon>{{ card.icon }}</mat-icon>
+                    <div class="text-container">
+                        <h2>{{ card.title }}</h2>
+                        <h3 style="font-weight: lighter; font-size: 18px;">{{ card.subtitle }}</h3>
+                    </div>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="card-content-container">
+                    <div class="main-number">
+                        {{ card.mainNumber }}
+                    </div>
+                    <div class="secondary-numbers">
+                        Los registros indican {{ card.mainNumber }} {{ card.title | lowercase }} registradas, de las
+                        cuales {{ card.active }} son activos, y {{ card.inactive }} son inactivos.
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <br>
+
+    <mat-card appearance="outlined">
+        <mat-card-header style = "padding: 2%;">
+            <div class="header-container">
+                <mat-icon>analytics</mat-icon>
+                <div class="text-container">
+                    <h2>Sesiones: Estadística y analítica</h2>
+                    <h3 style="font-weight: lighter; font-size: 18px;">¿Qué se puede decir sobre el inicio de sesión por parte de los usuarios?</h3>
+                </div>
+            </div>
+        </mat-card-header>
+        <mat-card-content style = "padding: 1%;">
+            <app-list-table
+                [columns]="_dashboardComponent.tableColumns"
+                [data]="_dashboardComponent.tableDatas">
+            </app-list-table>
+        </mat-card-content>
+    </mat-card>
+
+</div>

@@ -1,0 +1,38 @@
+<!-- Breadcrumb -->
+<app-breadcrumb [breadcrumbs]="personas_breadcrumb"></app-breadcrumb>
+
+<!-- Espaciado entre el Breadcrumb y el Título -->
+<div class = "padding"></div>
+
+<div class = "component-content">
+    <!--Título de la página-->
+    <div class="titulo-componente">
+        <mat-icon>groups</mat-icon>
+        <div class="titulo-texto">
+            <h1>Personas registradas</h1>
+            <h3>¿Hay algún nuevo integrante en el equipo?</h3>
+        </div>
+    </div>
+
+    <!-- Tabla de datos y filtro de búsqueda-->
+    <div class = "table-container">
+        <div class="search-add">
+            <app-search-bar (searchChanged)="onSearchTermChanged($event)"></app-search-bar>
+            <button 
+                mat-flat-button
+                class="add-button"
+                (click)="AgregarPersona()">
+                <mat-icon>person_add_alt_1</mat-icon>
+                Agregar Persona
+            </button>
+          </div>
+          
+        <app-list-table
+            [columns]="_personaComponent.tableColumns"
+            [data]="_personaComponent.tableDatas"
+            [actions]="_personaComponent.tableActions"
+            (editItem)="onEdit($event)"
+            (deleteItem)="onDelete($event)">
+      </app-list-table>
+    </div>
+</div>

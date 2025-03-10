@@ -5,6 +5,7 @@ D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.Gen
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.AssemblyInfoInputs.cache
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.AssemblyInfo.cs
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.csproj.CoreCompileInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.sourcelink.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.dll
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\refint\CRUD.Utilities.dll
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Utilities\obj\Debug\net6.0\CRUD.Utilities.pdb

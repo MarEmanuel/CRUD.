@@ -1,0 +1,12 @@
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\bin\Debug\net6.0\CRUD.Shared.deps.json
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\bin\Debug\net6.0\CRUD.Shared.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\bin\Debug\net6.0\CRUD.Shared.pdb
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.AssemblyInfoInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.AssemblyInfo.cs
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.csproj.CoreCompileInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.sourcelink.json
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\refint\CRUD.Shared.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\CRUD.Shared.pdb
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Shared\obj\Debug\net6.0\ref\CRUD.Shared.dll

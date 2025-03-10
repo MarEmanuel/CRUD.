@@ -1,0 +1,104 @@
+.dashboard-header,
+.dashboard-body {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.welcome-message {
+    margin: 1%;
+    color: black;
+    line-height: 0%;
+}
+
+.welcome-message h3 {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.welcome-message h5 {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+mat-card {
+    color: black;
+    background-color: white;
+    transition: background-color 0.2s ease;
+    border-radius: 20px;
+}
+
+mat-card:hover mat-card-header {
+    background-color: #005e80;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+mat-card-header{
+    padding: 3%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #b6e8fa;
+    transition: background-color 0.2s ease;
+}
+
+mat-card-header:hover .header-container mat-icon {
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-container mat-icon {
+    margin-right: 12px;
+    border-radius: 10px;
+    font-size: 36px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container h2,
+.text-container h3 {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.card-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+    margin: 2%;
+}
+
+.main-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    margin-right: 10%;
+}
+
+.secondary-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+}

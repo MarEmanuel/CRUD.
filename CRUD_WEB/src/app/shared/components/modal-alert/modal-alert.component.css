@@ -1,0 +1,28 @@
+.dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #1976d2;
+  color: white;
+  font-size: 18px;
+  padding: 5px 24px;
+}
+
+.dialog-title .mat-icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.dialog-content {
+  font-size: 1rem;
+  color: #000000;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.dialog-actions {
+  padding: 8px 24px;
+  text-align: right;
+}

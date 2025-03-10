@@ -1,0 +1,19 @@
+.search-bar-container {
+    display: flex;
+    width: 100%; 
+}
+
+.search-bar {
+    flex: 1;  
+    margin-right: 8px;  
+}
+
+.search-button-design{
+    box-shadow: none; 
+    background-color: royalblue; 
+    color: white;
+}
+
+.mat-form-field {
+    width: 100%; 
+}

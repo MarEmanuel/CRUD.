@@ -8,15 +8,23 @@ namespace CRUD.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Rol> builder)
         {
-            builder.HasKey(e => e.IdRol)
+            builder.HasKey(e => e.Id)
                     .HasName("PK__Roles__3C872F76F79038CE");
 
-            builder.Property(e => e.IdRol)
-                .ValueGeneratedNever()
+            builder.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
                 .HasColumnName("idRol");
 
-            builder.Property(e => e.RolName)
+            builder.Property(e => e.NombreRol)
                 .HasMaxLength(50)
+                .IsUnicode(false);
+
+            builder.Property(e => e.DescripcionRol)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+            builder.Property(e => e.EstadoRol)
+                .HasMaxLength(1)
                 .IsUnicode(false);
 
             builder.HasMany(d => d.IdUsuarios)

@@ -10,8 +10,11 @@ D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastr
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.AssemblyInfoInputs.cache
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.AssemblyInfo.cs
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.sourcelink.json
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Inf.43FAA5D9.Up2Date
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.dll
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\refint\CRUD.Infrastructure.dll
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.pdb
 D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\obj\Debug\net6.0\ref\CRUD.Infrastructure.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Shared.dll
+D:\Proyectos\Prueba_CRUD\CRUD\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Shared.pdb

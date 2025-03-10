@@ -1,0 +1,15 @@
+GO
+CREATE PROCEDURE DatosDashboardAdmin
+AS
+BEGIN
+	 SELECT 
+        (SELECT COUNT(*) FROM Usuarios) AS TotalUsuarios,
+		(SELECT COUNT(*) FROM Usuarios WHERE EstadoUsuario = 'A') AS UsuariosActivos,
+		(SELECT COUNT(*) FROM Usuarios WHERE EstadoUsuario = 'I') AS UsuariosInactivos,
+        (SELECT COUNT(*) FROM Roles) AS TotalRoles,
+		(SELECT COUNT(*) FROM Roles WHERE EstadoRol = 'A') AS RolesActivos,
+		(SELECT COUNT(*) FROM Roles WHERE EstadoRol = 'I') AS RolesInactivos,
+        (SELECT COUNT(*) FROM Persona) AS TotalPersonas,
+		(SELECT COUNT(*) FROM Persona WHERE EstadoPersona = 'A') AS PersonasActivas,
+		(SELECT COUNT(*) FROM Persona WHERE EstadoPersona = 'I') AS PersonasInactivas
+END;

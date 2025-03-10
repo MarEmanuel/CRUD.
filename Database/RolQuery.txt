@@ -1,0 +1,109 @@
+-- Tablas
+CREATE TABLE Roles (
+    idRol INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    NombreRol VARCHAR(50) NOT NULL,
+	DescripcionRol VARCHAR(100) NOT NULL,
+	EstadoRol VARCHAR DEFAULT 'A' NOT NULL,
+	EsActivo CHAR DEFAULT 'A' NOT NULL,
+	FechaCreacion DATE,
+	FechaEdicion DATE,
+	FechaEliminacion DATE,
+	UsuarioCreacion INT,
+	UsuarioEdicion INT,
+	UsuarioEliminacion INT
+);
+
+GO
+CREATE PROCEDURE InsertarRol
+    @RolName VARCHAR(50),
+	@RolDescription VARCHAR(100),
+	@RolStatus VARCHAR(1)
+AS
+BEGIN
+    INSERT INTO Roles (NombreRol, DescripcionRol, EstadoRol, FechaCreacion)
+    VALUES (@RolName, @RolDescription, @RolStatus, GETDATE());
+END;
+
+EXEC InsertarRol 'Usuario', 'Para los usuarios del sistema.', 'A'
+EXEC InsertarRol 'Administrador', 'Para los administradores del sistema.', 'A'
+EXEC InsertarRol 'Prueba', 'Descripción de prueba.', 'A'
+
+SELECT * FROM Roles;
+
+GO
+CREATE PROCEDURE LeerRoles
+AS
+BEGIN
+    SELECT 
+        idRol,
+		NombreRol,
+		DescripcionRol,
+		EstadoRol,
+		EsActivo,
+		FechaCreacion,
+		UsuarioCreacion,
+		FechaEdicion,
+		UsuarioEdicion,
+		FechaEliminacion,
+		UsuarioEliminacion
+    FROM 
+        Roles
+	WHERE
+		EsActivo = 'A'
+END;
+
+EXEC LeerRoles;
+
+GO
+CREATE PROCEDURE ListarRoles
+AS
+BEGIN
+	SELECT
+		idRol,
+		NombreRol
+	FROM 
+		Roles
+	WHERE
+		EsActivo = 'A'
+END;
+
+EXEC ListarRoles;
+
+GO
+CREATE PROCEDURE EditarRol
+	@RolId INT,
+	@RolName VARCHAR(50),
+	@DescripcionRol VARCHAR(100),
+	@EstadoRol VARCHAR(1)
+AS
+BEGIN
+	UPDATE
+		Roles 
+	SET 
+		NombreRol = @RolName,
+		DescripcionRol = @DescripcionRol,
+		EstadoRol = @EstadoRol,
+		FechaEdicion = GETDATE()
+	WHERE
+		idRol = @RolId
+END;
+
+select * from roles;
+
+EXEC EditarRol 3, 'Rol - Swagger', 'Descripción Rol - Swagger', 'I'
+
+GO
+CREATE PROCEDURE EliminarRol
+	@RolId INT
+AS
+BEGIN
+	UPDATE
+		Roles 
+	SET 
+		EsActivo = 'I',
+		FechaEliminacion = GETDATE()
+	WHERE
+		idRol = @RolId
+END;
+
+EXEC EliminarRol 3;
